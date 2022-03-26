@@ -1,0 +1,20 @@
+<p>dateutility works!</p><br><br>
+<div>
+  <form id="dateForm" #dateForm="ngForm" (ngSubmit)="calculate(dateForm)">
+
+    <label for="firstdt">first date</label>    
+    <input type="date" id="firstdt" name="firstdt" required="required" ngModel><br><br>
+
+    <label for="secdt">Second date</label>
+    <input type="date" id="secdt" name="secdt" required="required" ngModel><br><br>
+
+    <button type="submit" id="dateSubmit">submit</button><br><br>
+
+  </form>
+
+  <div id="dateResultContainer">
+    Number of months between {{dateForm.value.firstdt}} and {{dateForm.value.secdt}} is {{months}} months <br><br>
+    Number of days between {{dateForm.value.firstdt}} and {{dateForm.value.secdt}} is {{days}} days <br><br>
+  </div>
+
+</div>

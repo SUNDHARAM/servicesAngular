@@ -1,0 +1,21 @@
+<p>arrayutility works!</p>
+<br><br>
+<div id="main">
+    <form action="">
+        <input type="text" id="inputField" name="inputField" 
+        placeholder="Enter your list" required="required" [(ngModel)]="listitem"> 
+        <p>{{listitem}}</p>
+        <div>
+            <button id="submitButton" [disabled]="!listitem" (click)="additem()" >Add</button>
+        </div>
+        <div *ngFor="let li of list;let i=index;">
+            <p (click)="deleteItem(i)">{{li}}</p>
+        </div>
+        <div>    
+            <p *ngIf="isEmpty()">Array is empty</p>
+            <button (click)="getSort()">sort</button>
+            <button (click)="getReverse()">Reverse</button>
+        </div>
+    </form>
+</div>
+    
